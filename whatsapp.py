@@ -36,9 +36,9 @@ while(1):
         else:
             print(colored("{:<24} {:<8} {:<8} {:<8} {:<8} {:<8}".format(row[0], row[1], row[2], row[3], row[4], row[5]), 'white'))
             if(batter):
-                send_message('Papa', row[0]+' '+row[1]+'('+row[2]+')')
+                send_message('XYZ', row[0]+' '+row[1]+'('+row[2]+')')
     print('\n')
-    send_message('Papa', scores)
+    send_message('XYZ', scores)
     sleep(200)
 
 
