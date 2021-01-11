@@ -27,17 +27,7 @@ def fetch_details(link):
     table.append(row)
     
     return table
-'''
-while(1):
-    table = fetch_details('https://www.cricbuzz.com/live-cricket-scores/31647/aus-vs-ind-3rd-test-india-tour-of-australia-2020-21')
-    for row in table:
-        if(row[0]=='Batsman' or row[0]=='Bowler'):
-            print(colored("{:<24} {:<8} {:<8} {:<8} {:<8} {:<8}".format(row[0], row[1], row[2], row[3], row[4], row[5]), 'cyan', attrs=['bold']))
-        else:
-            print(colored("{:<24} {:<8} {:<8} {:<8} {:<8} {:<8}".format(row[0], row[1], row[2], row[3], row[4], row[5]), 'white'))
-    print('\n')
-    sleep(300)
-'''
+
     
     
     
