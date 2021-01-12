@@ -7,7 +7,9 @@ from detail import *
 from overview import *
 from send import send_message
 
-browser = webdriver.Chrome('/Users/anjaneyatripathi/downloads/chromedriver') 
+# replace this with the location of your driver
+browser = webdriver.Chrome('/path/to/your/driver')
+
 URL = 'https://web.whatsapp.com/'
 browser.get(URL)
 time.sleep(10)
@@ -26,13 +28,17 @@ while(1):
         else:
             print(colored("{:<24} {:<8} {:<8} {:<8} {:<8} {:<8}".format(row[0], row[1], row[2], row[3], row[4], row[5]), 'white'))
             if(batter):
-                msg = '\n'+row[0]+'{:<4}'+row[1]+'('+row[2]+')'+'{:<4}'+'S.R. '+row[5]
+                msg = '\n'+row[0]+':  '+row[1]+'('+row[2]+')'+'  '+'S.R. '+row[5]
                 message += msg
             else:
-                msg = '\n'+row[0]+'{:<4}'+row[1]+'-'+row[2]+'-'+row[3]+'-'+row[4]
+                msg = '\n'+row[0]+':  '+row[1]+'-'+row[2]+'-'+row[3]+'-'+row[4]
                 message += msg            
     t = time.localtime()
     current_time = time.strftime("%H:%M:%S", t)
     message += ('\nThis is the latest score updated at: ' + current_time)
-    send_message('Ajitesh', message, browser)
-    time.sleep(10)
+    print('\n')
+    
+    # replace this with the name of the contact you want to send the scorecard to
+    send_message('name-of-contact', message, browser)
+
+    time.sleep(300)
