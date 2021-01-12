@@ -1,5 +1,4 @@
 from selenium.webdriver.common.keys import Keys
-from nltk import sent_tokenize
 
 def send_message(rec, mes, browser):
     try:
@@ -14,13 +13,7 @@ def send_message(rec, mes, browser):
             msg_bar.send_keys(Keys.SHIFT + Keys.ENTER)
             msg_bar.send_keys(Keys.SHIFT + Keys.ENTER)
         msg_bar.send_keys(Keys.ENTER)
-        return 'Sent Successfully'
+        return 'Scorecard Sent Successfully'
     except Exception as e:
-        print('Error encountered: ', e)
-        return 'Error Encountered'
-
-
-
-    
-    
-    
+        print('Error: ', e)
+        return 'Error While Sending Scorecard'  
