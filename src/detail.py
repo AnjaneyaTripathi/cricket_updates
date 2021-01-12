@@ -1,15 +1,11 @@
 import requests 
 from bs4 import BeautifulSoup 
-import csv 
-from termcolor import colored
-from time import sleep
 
 def fetch_details(link):
     URL = link
     r = requests.get(URL) 
     soup = BeautifulSoup(r.content, 'html5lib') 
     
-    players = soup.find_all('div', attrs = {'class': 'cb-col cb-col-50'})
     stats = soup.find('div', attrs = {'class': 'cb-col-67 cb-col'})
     scores = stats.find_all('div')
     
