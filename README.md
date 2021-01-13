@@ -7,6 +7,8 @@ Ever wanted the latest cricket scores periodically without repeatedly opening th
 ### Installation
 
 ```
+* fork this repository *
+
 $ git clone https://github.com/<USER_NAME>/cricket_updates
 $ cd cricket_updates/
 
